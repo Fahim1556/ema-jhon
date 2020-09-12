@@ -119,7 +119,7 @@ function Login() {
       <label htmlFor="newUser">New user Sign up</label>
        
       <form onSubmit={handleSubmit}>
-        { user.newUser && <input name="name" type="text" onBlur={handleBlur} placeholder="Your name"/> }
+        { newUser && <input name="name" type="text" onBlur={handleBlur} placeholder="Your name"/> }
         <br/>
         <input type="text" name="email" onBlur={handleBlur} placeholder="enter your email"/>
         <br/>
