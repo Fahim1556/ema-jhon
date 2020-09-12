@@ -1,8 +1,11 @@
 import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 import logo from '../../images/logo.png';
 import '../Header.css';
 
 const Header = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
     return (
         <div className="header">
            <img src={logo} alt=""/>
@@ -10,6 +13,7 @@ const Header = () => {
                <a href="/shop">Shop</a>
                <a href="/review">Order Review</a>
                <a href="/inventory">Manage Inventory</a>
+               <button onClick={() => setLoggedInUser({})}>sign out </button>
            </nav>
         </div>
     );
